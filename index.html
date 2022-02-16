@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorBalls</title>
+    <link rel="icon" type="image/png" href="./cloudinary_web_german_lp_customer_logos_nbc_1341640b3b.webp">
+</head>
+<body>
+    <div class="box-parent">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+     
+    <style>
+        .box{
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  transition: 1s;
+}
+        * {
+  outline: 0 !important;
+}
+ 
+body {
+margin: 0px;
+padding: 0px;
+
+font-family: 'Source Sans Pro', sans-serif;
+background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+.box{
+ 
+background-color: white;
+color: black;
+margin: 60px;
+display: inline-block;
+padding: 70px;
+text-align: center;
+border-radius: 50%;
+}
+ 
+.box:hover {
+background-color: green;
+transition: 1s;
+}
+.box-parent{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+    </style>
+    <script>
+    const boxes = document.querySelectorAll('.box')
+boxes.forEach(item => {
+  item.addEventListener('mouseover', e => {
+    item.style.backgroundColor = `#${parseInt(Math.random()*0xffffff).toString(16).padStart(6, '0')}`
+  })
+  item.addEventListener('mouseout', e => {
+    item.style.backgroundColor = '#fff'
+  })
+})    
+    </script>
+</body>
+</html>
